@@ -39,44 +39,12 @@
                     fontFamily: {
                         'sans': ['Montserrat', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif']
-                    },
-                    animation: {
-                        'float': 'float 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'spin-slow': 'spin 4s linear infinite',
-                        'bounce-slow': 'bounce 2s infinite',
-                        'slide-up': 'slide-up 0.8s ease-out forwards',
-                        'fade-in': 'fade-in 0.8s ease-out forwards'
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-15px)' }
-                        },
-                        'slide-up': {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        'fade-in': {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        }
-                    },
-                    boxShadow: {
-                        'glow': '0 0 20px rgba(231, 111, 81, 0.3)',
-                        'strong': '0 20px 40px -10px rgba(0, 0, 0, 0.2)'
                     }
                 }
-            },
-            // Optimize for performance
-            corePlugins: {
-                preflight: false, // Reduce CSS size
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-        
         .font-vibes {
             font-family: 'Great Vibes', cursive;
         }
@@ -93,74 +61,44 @@
         }
         
         .hover-lift:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
         }
         
-        .glow-effect {
-            position: relative;
+        .price-slider::-webkit-slider-thumb {
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #e76f51;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
         }
         
-        .hero-title {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><path d="M0,25 Q25,0 50,25 T100,25 L100,50 L0,50 Z" fill="none" stroke="rgba(231,111,81,0.3)" stroke-width="2"/></svg>');
-            background-repeat: repeat-x;
-            background-position: center bottom;
-            background-size: 50px 15px;
+        .price-slider::-moz-range-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #e76f51;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
         }
         
-        .star-animation::before {
-            content: '*';
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            animation: spin-slow 3s linear infinite, bounce-slow 2s ease-in-out infinite;
-            color: #e76f51;
-            font-size: 1.5rem;
+        .city-checkbox:checked + .city-label {
+            background: #e76f51;
+            color: white;
+            transform: scale(1.05);
         }
         
-        .desert-bg {
-            background: linear-gradient(135deg, #f8f4f0 0%, #e0ccb9 50%, #b88661 100%);
+        .guests-input::-webkit-outer-spin-button,
+        .guests-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
         
-        .petra-bg {
-            background: linear-gradient(135deg, #9d0208 0%, #d62828 50%, #e76f51 100%);
-        }
-        
-        .sea-bg {
-            background: linear-gradient(135deg, #0077b6 0%, #00b4d8 50%, #90e0ef 100%);
-        }
-        
-        /* Optimize for mobile performance */
-        @media (max-width: 768px) {
-            .hover-lift:hover {
-                transform: translateY(-4px) scale(1.01);
-            }
-            
-            .animate-float {
-                animation: none;
-            }
-            
-            .stagger-animation {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-            }
-            
-            .testimonial-card {
-                transform: none !important;
-            }
-            
-            .testimonial-card:hover {
-                transform: none !important;
-            }
-        }
-        
-        /* Reduce motion for accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+        .guests-input[type=number] {
+            -moz-appearance: textfield;
         }
     </style>
 </head>
@@ -207,12 +145,12 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-8 items-center">
                 <div class="space-y-6">
-                    <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-amber-800 px-4 py-2 rounded-full text-xs font-medium shadow-lg animate-float">
+                    <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-amber-800 px-4 py-2 rounded-full text-xs font-medium shadow-lg">
                         <i class="fas fa-fire text-amber-600"></i>
                         <span class="font-vibes text-lg">Exclusive Jordan Experience</span>
                     </div>
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight hero-title">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                         Experience the 
                         <span class="text-gradient block">Magic of Jordan</span>
                     </h1>
@@ -222,27 +160,107 @@
                         Immerse yourself in authentic Jordanian hospitality and breathtaking landscapes.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <button class="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-md hover-lift flex items-center justify-center gap-2">
-                            Explore Chalets <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center">
-                            Virtual Tour
-                        </button>
-                    </div>
-                    
-                    <div class="grid grid-cols-3 gap-4 pt-6">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-amber-600">150+</div>
-                            <div class="text-xs text-gray-600">Happy Guests</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-amber-600">12</div>
-                            <div class="text-xs text-gray-600">Unique Chalets</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-amber-600">4.9</div>
-                            <div class="text-xs text-gray-600">Rating</div>
+                    <!-- Booking Search Form -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Find Your Perfect Chalet</h3>
+                        <div class="space-y-4">
+                            <!-- City Selection -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Select City</label>
+                                <div class="flex flex-wrap gap-2">
+                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
+                                        <input type="checkbox" class="city-checkbox sr-only" value="petra">
+                                        <i class="fas fa-city text-amber-600"></i>
+                                        <span class="text-sm">Petra</span>
+                                    </label>
+                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
+                                        <input type="checkbox" class="city-checkbox sr-only" value="amman">
+                                        <i class="fas fa-city text-amber-600"></i>
+                                        <span class="text-sm">Amman</span>
+                                    </label>
+                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
+                                        <input type="checkbox" class="city-checkbox sr-only" value="dead-sea">
+                                        <i class="fas fa-water text-amber-600"></i>
+                                        <span class="text-sm">Dead Sea</span>
+                                    </label>
+                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
+                                        <input type="checkbox" class="city-checkbox sr-only" value="wadi-rum">
+                                        <i class="fas fa-mountain text-amber-600"></i>
+                                        <span class="text-sm">Wadi Rum</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Date Selection -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Check-in Date</label>
+                                    <input 
+                                        type="date" 
+                                        id="check-in"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Check-out Date</label>
+                                    <input 
+                                        type="date" 
+                                        id="check-out"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    />
+                                </div>
+                            </div>
+                            
+                            <!-- Guests -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Adults</label>
+                                    <input 
+                                        type="number" 
+                                        id="adults"
+                                        class="w-full guests-input px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                        min="1" 
+                                        max="10" 
+                                        value="2"
+                                    />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Children</label>
+                                    <input 
+                                        type="number" 
+                                        id="children"
+                                        class="w-full guests-input px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                        min="0" 
+                                        max="10" 
+                                        value="0"
+                                    />
+                                </div>
+                            </div>
+                            
+                            <!-- Price Range -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Price Range: <span id="price-value" class="font-bold text-amber-600">$100 - $500</span> per night</label>
+                                <input 
+                                    type="range" 
+                                    min="100" 
+                                    max="500" 
+                                    value="500" 
+                                    step="50" 
+                                    id="price-range"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer price-slider"
+                                />
+                                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                    <span>$100</span>
+                                    <span>$200</span>
+                                    <span>$300</span>
+                                    <span>$400</span>
+                                    <span>$500</span>
+                                </div>
+                            </div>
+                            
+                            <button class="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-md hover-lift">
+                                Search Chalets <i class="fas fa-search ml-2"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -280,7 +298,7 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="petra" data-price="249">
                     <div class="relative">
                         <img 
                             src="https://placehold.co/600x400/9d0208/ffffff?text=Petra+Chalet" 
@@ -323,7 +341,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="dead-sea" data-price="299">
                     <div class="relative">
                         <img 
                             src="https://placehold.co/600x400/0077b6/ffffff?text=Dead+Sea+Retreat" 
@@ -366,7 +384,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="wadi-rum" data-price="199">
                     <div class="relative">
                         <img 
                             src="https://placehold.co/600x400/cc6600/ffffff?text=Wadi+Rum+Lodge" 
@@ -540,6 +558,16 @@
                             </div>
                         </div>
                         <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-red-500">*</span></label>
+                            <input 
+                                type="tel" 
+                                name="phone"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                placeholder="+962 XXX XXX XXXX"
+                                required
+                            />
+                        </div>
+                        <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                             <input 
                                 type="email" 
@@ -548,6 +576,79 @@
                                 placeholder="your.email@example.com"
                                 required
                             />
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
+                                <input 
+                                    type="date" 
+                                    name="check_in"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
+                                <input 
+                                    type="date" 
+                                    name="check_out"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                />
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Adults</label>
+                                <select 
+                                    name="adults"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                >
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
+                                    <option value="5">5+ Adults</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Children</label>
+                                <select 
+                                    name="children"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                >
+                                    <option value="0" selected>No Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                    <option value="3">3 Children</option>
+                                    <option value="4">4+ Children</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Location</label>
+                            <select 
+                                name="location"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                            >
+                                <option value="" selected>Select a location</option>
+                                <option value="petra">Petra</option>
+                                <option value="amman">Amman</option>
+                                <option value="dead-sea">Dead Sea</option>
+                                <option value="wadi-rum">Wadi Rum</option>
+                                <option value="any">Any Location</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
+                            <select 
+                                name="budget"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                            >
+                                <option value="" selected>Select a budget range</option>
+                                <option value="under-200">Under $200 per night</option>
+                                <option value="200-300">$200 - $300 per night</option>
+                                <option value="300-400">$300 - $400 per night</option>
+                                <option value="over-400">Over $400 per night</option>
+                            </select>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
@@ -661,13 +762,61 @@
             });
         });
         
-        // Optimize for mobile performance
-        if (window.innerWidth <= 768) {
-            // Remove heavy animations on mobile
-            document.querySelectorAll('.animate-float').forEach(el => {
-                el.style.animation = 'none';
+        // Price Range Slider
+        const priceSlider = document.getElementById('price-range');
+        const priceValue = document.getElementById('price-value');
+        
+        if (priceSlider && priceValue) {
+            priceSlider.addEventListener('input', function() {
+                const value = this.value;
+                priceValue.textContent = `$100 - $${value}`;
             });
         }
+        
+        // City Selection
+        const cityCheckboxes = document.querySelectorAll('.city-checkbox');
+        
+        cityCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const cities = Array.from(cityCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                
+                // Filter chalets based on selected cities
+                document.querySelectorAll('[data-city]').forEach(chalet => {
+                    const city = chalet.getAttribute('data-city');
+                    if (cities.length === 0 || cities.includes(city)) {
+                        chalet.style.display = 'block';
+                    } else {
+                        chalet.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Search Functionality
+        document.querySelector('.bg-white.rounded-xl.shadow-lg button').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const checkIn = document.getElementById('check-in').value;
+            const checkOut = document.getElementById('check-out').value;
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+            const price = document.getElementById('price-range').value;
+            
+            if (!checkIn || !checkOut) {
+                alert('Please select both check-in and check-out dates');
+                return;
+            }
+            
+            if (new Date(checkOut) <= new Date(checkIn)) {
+                alert('Check-out date must be after check-in date');
+                return;
+            }
+            
+            // In a real application, this would filter the chalets
+            alert(`Searching for chalets from ${checkIn} to ${checkOut} for ${parseInt(adults) + parseInt(children)} guests with a maximum price of $${price} per night`);
+        });
     </script>
 </body>
 </html>
