@@ -49,23 +49,19 @@
         .font-vibes {
             font-family: 'Great Vibes', cursive;
         }
-        
         .text-gradient {
             background: linear-gradient(90deg, #16a34a, #22c55e, #4ade80, #86efac);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
         .hover-lift {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .hover-lift:hover {
             transform: translateY(-4px) scale(1.01);
             box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
         }
-        
         .price-slider::-webkit-slider-thumb {
             appearance: none;
             height: 20px;
@@ -75,7 +71,6 @@
             cursor: pointer;
             box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
         }
-        
         .price-slider::-moz-range-thumb {
             height: 20px;
             width: 20px;
@@ -85,37 +80,22 @@
             border: none;
             box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
         }
-        
         .city-checkbox:checked + .city-label {
             background: #16a34a;
             color: white;
             transform: scale(1.05);
         }
-        
         .guests-input::-webkit-outer-spin-button,
         .guests-input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-        
         .guests-input[type=number] {
             -moz-appearance: textfield;
         }
     </style>
 </head>
 <body class="bg-sand-100 text-gray-800">
-    <!-- Logo Animation Loader -->
-    <div id="logo-loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
-        <div class="flex flex-col items-center space-y-6">
-            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center animate-spin">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-            </div>
-            <div class="text-3xl font-bold text-gradient animate-pulse">Reva Chalets</div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-lg border-b border-green-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
@@ -140,8 +120,7 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section - Now features key information first -->
+    <!-- Hero Section -->
     <section id="home" class="pt-28 pb-16 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
@@ -149,17 +128,14 @@
                     <i class="fas fa-star text-green-600"></i>
                     <span class="font-vibes text-xl">Jordan's #1 Luxury Chalets</span>
                 </div>
-                
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
                     Experience the 
                     <span class="text-gradient block">Magic of Jordan</span>
                 </h1>
-                
                 <p class="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8">
                     Discover extraordinary accommodations from the ancient wonders of Petra to the serene shores of the Dead Sea. 
                     Immerse yourself in authentic Jordanian hospitality and breathtaking landscapes.
                 </p>
-                
                 <!-- Key Benefits -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                     <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover-lift transform">
@@ -185,8 +161,7 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Booking Search Form - Now prominently featured -->
+            <!-- Booking Search Form -->
             <div class="bg-white rounded-2xl p-8 shadow-2xl max-w-5xl mx-auto mb-12">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Find Your Perfect Chalet</h3>
                 <div class="space-y-6">
@@ -216,7 +191,6 @@
                             </label>
                         </div>
                     </div>
-                    
                     <!-- Date & Guests -->
                     <div class="grid md:grid-cols-4 gap-4">
                         <div>
@@ -259,7 +233,6 @@
                             </select>
                         </div>
                     </div>
-                    
                     <!-- Price Range -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-3">Price Range: <span id="price-value" class="font-bold text-green-600">70 - 350 JD</span> per night</label>
@@ -280,19 +253,16 @@
                             <span>350 JD</span>
                         </div>
                     </div>
-                    
                     <button class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-lift">
                         Search & Book Now <i class="fas fa-search ml-2"></i>
                     </button>
                 </div>
             </div>
-            
             <!-- Featured Chalets Preview -->
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-black text-gray-900 mb-4">Our Most Popular Chalets</h2>
                 <p class="text-lg text-gray-600">Hand-picked for an unforgettable Jordanian experience</p>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="petra" data-price="175">
                     <div class="relative">
@@ -332,7 +302,6 @@
                         </button>
                     </div>
                 </div>
-                
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="dead-sea" data-price="210">
                     <div class="relative">
                         <img 
@@ -371,7 +340,6 @@
                         </button>
                     </div>
                 </div>
-                
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="wadi-rum" data-price="140">
                     <div class="relative">
                         <img 
@@ -411,7 +379,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="text-center mt-10">
                 <button class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center gap-2">
                     <i class="fas fa-images"></i>
@@ -420,7 +387,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-16 px-4 sm:px-6 bg-white">
         <div class="max-w-7xl mx-auto">
@@ -462,15 +428,309 @@
             </div>
         </div>
     </section>
-
+    <!-- Chalets Section -->
+    <section id="chalets" class="py-16 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Our Luxury Chalets</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Discover our curated collection of luxury chalets across Jordan's most breathtaking locations. 
+                    Each property is carefully selected for its unique character, exceptional amenities, and authentic Jordanian hospitality.
+                </p>
+            </div>
+            <!-- Filter Controls -->
+            <div class="bg-white rounded-xl p-6 shadow-lg mb-8">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button class="filter-btn bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all hover-lift" data-filter="all">All Locations</button>
+                    <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-all hover-lift" data-filter="petra">Petra</button>
+                    <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-all hover-lift" data-filter="amman">Amman</button>
+                    <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-all hover-lift" data-filter="dead-sea">Dead Sea</button>
+                    <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-all hover-lift" data-filter="wadi-rum">Wadi Rum</button>
+                </div>
+            </div>
+            <!-- Chalets Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Petra Chalets -->
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="petra" data-price="175">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/9d0208/ffffff?text=Petra+Heritage" alt="Petra Heritage Chalet" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            175 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-city mr-1"></i> Petra
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Petra Heritage</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.8</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Experience the magic of ancient Petra from this beautifully designed chalet with panoramic views of the historic site.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Mountain View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Private Pool</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">King Bed</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="petra" data-price="210">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/772525/ffffff?text=Petra+View" alt="Petra View Chalet" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            210 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-city mr-1"></i> Petra
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Petra View</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Luxurious chalet with uninterrupted views of the Treasury and surrounding mountains, featuring modern amenities and traditional decor.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Panoramic View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Hot Tub</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Terrace</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <!-- Amman Chalets -->
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="amman" data-price="130">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/256767/ffffff?text=Amman+Oasis" alt="Amman Oasis Chalet" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            130 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-city mr-1"></i> Amman
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Amman Oasis</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.6</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Modern urban retreat in the heart of Amman with rooftop garden and panoramic city views.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">City View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Rooftop</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Modern</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="amman" data-price="150">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/4a4a4a/ffffff?text=Amman+Hills" alt="Amman Hills Chalet" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            150 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-city mr-1"></i> Amman
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Amman Hills</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.7</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Elegant hillside chalet with spacious living areas and stunning views of the city skyline.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Hillside</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Spacious</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Modern</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <!-- Dead Sea Chalets -->
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="dead-sea" data-price="210">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/0077b6/ffffff?text=Dead+Sea+Retreat" alt="Dead Sea Retreat" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            210 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-water mr-1"></i> Dead Sea
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Dead Sea Retreat</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Luxurious chalet with direct access to the Dead Sea, featuring private spa treatments and mineral-rich pools.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Sea View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Spa Access</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Private Beach</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="dead-sea" data-price="190">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/1a5d5d/ffffff?text=Dead+Sea+Oasis" alt="Dead Sea Oasis" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            190 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-water mr-1"></i> Dead Sea
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Dead Sea Oasis</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.8</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Tranquil retreat with private mineral pools and panoramic views of the lowest point on Earth.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Mineral Pools</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Sea View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Tranquil</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <!-- Wadi Rum Chalets -->
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="wadi-rum" data-price="140">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/cc6600/ffffff?text=Wadi+Rum+Lodge" alt="Wadi Rum Lodge" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            140 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-mountain mr-1"></i> Wadi Rum
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Wadi Rum Lodge</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.7</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Authentic Bedouin-style lodge in the heart of the Martian landscape, perfect for stargazing and desert adventures.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Desert View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Stargazing</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Bedouin</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="wadi-rum" data-price="160">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/a35c1c/ffffff?text=Wadi+Rum+View" alt="Wadi Rum View" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            160 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-mountain mr-1"></i> Wadi Rum
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Wadi Rum View</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.8</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Premium chalet with panoramic views of the desert mountains and luxury amenities in the Martian landscape.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Panoramic View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Luxury</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Desert</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <!-- Additional Chalets -->
+                <div class="chalet-card bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-location="petra" data-price="190">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/5d2525/ffffff?text=Petra+Sunset" alt="Petra Sunset Chalet" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
+                            190 JD/night
+                        </div>
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-city mr-1"></i> Petra
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Petra Sunset</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                <span class="text-sm font-medium text-gray-700">4.7</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Chalet with breathtaking sunset views over the ancient city, featuring a private terrace and traditional decor.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Sunset View</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Private Terrace</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Traditional</span>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-lift">
+                    View All 12 Chalets
+                </button>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 sm:px-6 green-bg text-white">
+    <section id="contact" class="py-16 px-4 sm:px-6 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-black mb-4">Contact Us</h2>
                 <p class="text-lg opacity-90">We're here to help you plan your perfect Jordanian getaway</p>
             </div>
-            
             <div class="grid lg:grid-cols-2 gap-8">
                 <div class="space-y-6">
                     <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
@@ -478,7 +738,6 @@
                             <i class="fas fa-envelope"></i>
                             Get in Touch
                         </h3>
-                        
                         <div class="space-y-4">
                             <div class="flex items-start gap-4 group">
                                 <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
@@ -489,7 +748,6 @@
                                     <div class="opacity-90">King Hussein Business Park, Amman, Jordan 11953</div>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start gap-4 group">
                                 <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
                                     <i class="fas fa-phone text-2xl"></i>
@@ -499,7 +757,6 @@
                                     <div class="opacity-90">+962 6 580 0100</div>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start gap-4 group">
                                 <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
                                     <i class="fas fa-envelope text-2xl"></i>
@@ -509,7 +766,6 @@
                                     <div class="opacity-90">info@revafarmsjordan.com</div>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start gap-4 group">
                                 <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
                                     <i class="fas fa-clock text-2xl"></i>
@@ -522,8 +778,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="bg-gradient-to-r from-green-600 to-green-700 p-6 rounded-xl text-center">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-500 p-6 rounded-xl text-center">
                         <div class="flex items-center justify-center gap-4 mb-4">
                             <i class="fas fa-calendar-alt text-3xl"></i>
                             <div>
@@ -531,12 +786,11 @@
                                 <div class="text-lg opacity-90">Reserve your dream chalet today</div>
                             </div>
                         </div>
-                        <button class="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                        <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105">
                             Check Availability
                         </button>
                     </div>
                 </div>
-                
                 <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
                     <form action="https://formspree.io/f/mrbagybk" method="POST" class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
@@ -610,7 +864,7 @@
                         </div>
                         <button 
                             type="submit"
-                            class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover-lift"
+                            class="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover-lift"
                         >
                             Send Booking Request
                         </button>
@@ -619,7 +873,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
@@ -672,22 +925,7 @@
             </div>
         </div>
     </footer>
-
     <script>
-        // Logo Animation Loader
-        document.addEventListener('DOMContentLoaded', function() {
-            const loader = document.getElementById('logo-loader');
-            
-            // Hide loader after 1.5 seconds
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                loader.style.transition = 'opacity 0.5s ease-out';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 500);
-            }, 1500);
-        });
-        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -701,7 +939,6 @@
                 }
             });
         });
-        
         // Fix for "Reserve Now" buttons
         document.querySelectorAll('.reserve-now-button').forEach(button => {
             button.addEventListener('click', function(e) {
@@ -709,59 +946,52 @@
                 alert('Thank you for your interest! Please contact us directly for booking information at +962 6 580 0100 or info@revafarmsjordan.com');
             });
         });
-        
         // Price Range Slider
         const priceSlider = document.getElementById('price-range');
         const priceValue = document.getElementById('price-value');
-        
         if (priceSlider && priceValue) {
             priceSlider.addEventListener('input', function() {
                 const value = this.value;
                 priceValue.textContent = `70 - ${value} JD`;
             });
         }
-        
-        // City Selection
-        const cityCheckboxes = document.querySelectorAll('.city-checkbox');
-        
-        cityCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const cities = Array.from(cityCheckboxes)
-                    .filter(cb => cb.checked)
-                    .map(cb => cb.value);
+        // Chalets Filter
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                });
+                this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                this.classList.add('bg-green-600', 'text-white');
                 
-                // Filter chalets based on selected cities
-                document.querySelectorAll('[data-city]').forEach(chalet => {
-                    const city = chalet.getAttribute('data-city');
-                    if (cities.length === 0 || cities.includes(city)) {
-                        chalet.style.display = 'block';
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.chalet-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-location') === filter) {
+                        card.style.display = 'block';
                     } else {
-                        chalet.style.display = 'none';
+                        card.style.display = 'none';
                     }
                 });
             });
         });
-        
         // Search Functionality
         document.querySelector('.bg-white.rounded-2xl.shadow-2xl button').addEventListener('click', function(e) {
             e.preventDefault();
-            
             const checkIn = document.getElementById('check-in').value;
             const checkOut = document.getElementById('check-out').value;
             const adults = document.getElementById('adults').value;
             const children = document.getElementById('children').value;
             const price = document.getElementById('price-range').value;
-            
             if (!checkIn || !checkOut) {
                 alert('Please select both check-in and check-out dates');
                 return;
             }
-            
             if (new Date(checkOut) <= new Date(checkIn)) {
                 alert('Check-out date must be after check-in date');
                 return;
             }
-            
             // In a real application, this would filter the chalets
             alert(`Searching for chalets from ${checkIn} to ${checkOut} for ${parseInt(adults) + parseInt(children)} guests with a maximum price of ${price} JD per night`);
         });
