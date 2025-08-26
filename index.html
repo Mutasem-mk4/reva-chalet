@@ -12,17 +12,18 @@
             theme: {
                 extend: {
                     colors: {
-                        'amber': {
-                            50: '#fffbeb',
-                            100: '#fef3c7',
-                            200: '#fde68a',
-                            300: '#fcbf49',
-                            400: '#f4a261',
-                            500: '#e9c46a',
-                            600: '#e76f51',
-                            700: '#d62828',
-                            800: '#9d0208',
-                            900: '#600'
+                        'green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16'
                         },
                         'sand': {
                             100: '#f8f4f0',
@@ -50,7 +51,7 @@
         }
         
         .text-gradient {
-            background: linear-gradient(90deg, #e76f51, #f4a261, #e9c46a, #2a9d8f);
+            background: linear-gradient(90deg, #16a34a, #22c55e, #4ade80, #86efac);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -70,23 +71,23 @@
             height: 20px;
             width: 20px;
             border-radius: 50%;
-            background: #e76f51;
+            background: #16a34a;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
+            box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
         }
         
         .price-slider::-moz-range-thumb {
             height: 20px;
             width: 20px;
             border-radius: 50%;
-            background: #e76f51;
+            background: #16a34a;
             cursor: pointer;
             border: none;
-            box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
+            box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
         }
         
         .city-checkbox:checked + .city-label {
-            background: #e76f51;
+            background: #16a34a;
             color: white;
             transform: scale(1.05);
         }
@@ -106,7 +107,7 @@
     <!-- Logo Animation Loader -->
     <div id="logo-loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
         <div class="flex flex-col items-center space-y-6">
-            <div class="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center animate-spin">
+            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center animate-spin">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
@@ -116,11 +117,11 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-lg border-b border-amber-100">
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-lg border-b border-green-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <div class="w-9 h-9 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+                    <div class="w-9 h-9 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
@@ -128,176 +129,171 @@
                     <span class="text-xl font-bold text-gradient">Reva Chalets</span>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">Home</a>
-                    <a href="#chalets" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">Chalets</a>
-                    <a href="#about" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">About</a>
-                    <a href="#contact" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">Contact</a>
+                    <a href="#home" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Home</a>
+                    <a href="#chalets" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Chalets</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 transition-colors font-medium">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Contact</a>
                 </div>
-                <button class="bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-md hover-lift">
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-md hover-lift">
                     Book Now
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Now features key information first -->
     <section id="home" class="pt-28 pb-16 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-8 items-center">
-                <div class="space-y-6">
-                    <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-amber-800 px-4 py-2 rounded-full text-xs font-medium shadow-lg">
-                        <i class="fas fa-fire text-amber-600"></i>
-                        <span class="font-vibes text-lg">Exclusive Jordan Experience</span>
-                    </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
-                        Experience the 
-                        <span class="text-gradient block">Magic of Jordan</span>
-                    </h1>
-                    
-                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                        Discover extraordinary accommodations from the ancient wonders of Petra to the serene shores of the Dead Sea. 
-                        Immerse yourself in authentic Jordanian hospitality and breathtaking landscapes.
-                    </p>
-                    
-                    <!-- Booking Search Form -->
-                    <div class="bg-white rounded-xl p-6 shadow-lg">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Find Your Perfect Chalet</h3>
-                        <div class="space-y-4">
-                            <!-- City Selection -->
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Select City</label>
-                                <div class="flex flex-wrap gap-2">
-                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
-                                        <input type="checkbox" class="city-checkbox sr-only" value="petra">
-                                        <i class="fas fa-city text-amber-600"></i>
-                                        <span class="text-sm">Petra</span>
-                                    </label>
-                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
-                                        <input type="checkbox" class="city-checkbox sr-only" value="amman">
-                                        <i class="fas fa-city text-amber-600"></i>
-                                        <span class="text-sm">Amman</span>
-                                    </label>
-                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
-                                        <input type="checkbox" class="city-checkbox sr-only" value="dead-sea">
-                                        <i class="fas fa-water text-amber-600"></i>
-                                        <span class="text-sm">Dead Sea</span>
-                                    </label>
-                                    <label class="city-label flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300">
-                                        <input type="checkbox" class="city-checkbox sr-only" value="wadi-rum">
-                                        <i class="fas fa-mountain text-amber-600"></i>
-                                        <span class="text-sm">Wadi Rum</span>
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <!-- Date Selection -->
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Check-in Date</label>
-                                    <input 
-                                        type="date" 
-                                        id="check-in"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Check-out Date</label>
-                                    <input 
-                                        type="date" 
-                                        id="check-out"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                    />
-                                </div>
-                            </div>
-                            
-                            <!-- Guests -->
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Adults</label>
-                                    <input 
-                                        type="number" 
-                                        id="adults"
-                                        class="w-full guests-input px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                        min="1" 
-                                        max="10" 
-                                        value="2"
-                                    />
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Children</label>
-                                    <input 
-                                        type="number" 
-                                        id="children"
-                                        class="w-full guests-input px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                        min="0" 
-                                        max="10" 
-                                        value="0"
-                                    />
-                                </div>
-                            </div>
-                            
-                            <!-- Price Range -->
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Price Range: <span id="price-value" class="font-bold text-amber-600">70 - 350 JD</span> per night</label>
-                                <input 
-                                    type="range" 
-                                    min="70" 
-                                    max="350" 
-                                    value="350" 
-                                    step="10" 
-                                    id="price-range"
-                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer price-slider"
-                                />
-                                <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                    <span>70 JD</span>
-                                    <span>140 JD</span>
-                                    <span>210 JD</span>
-                                    <span>280 JD</span>
-                                    <span>350 JD</span>
-                                </div>
-                            </div>
-                            
-                            <button class="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-md hover-lift">
-                                Search Chalets <i class="fas fa-search ml-2"></i>
-                            </button>
-                        </div>
-                    </div>
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-3 bg-green-100 text-green-800 px-6 py-3 rounded-full text-sm font-medium shadow-lg mb-6">
+                    <i class="fas fa-star text-green-600"></i>
+                    <span class="font-vibes text-xl">Jordan's #1 Luxury Chalets</span>
                 </div>
                 
-                <div class="relative">
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover-lift">
-                        <img 
-                            src="https://placehold.co/600x400/e76f51/ffffff?text=Jordan+Views" 
-                            alt="Luxury chalet in Jordan" 
-                            class="w-full h-64 sm:h-80 object-cover"
-                        />
-                    </div>
-                    <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-star text-amber-500"></i>
-                            <div>
-                                <div class="font-semibold text-gray-900 text-sm">Exceptional</div>
-                                <div class="text-xs text-gray-600">4.9/5 from 230 reviews</div>
-                            </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
+                    Experience the 
+                    <span class="text-gradient block">Magic of Jordan</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8">
+                    Discover extraordinary accommodations from the ancient wonders of Petra to the serene shores of the Dead Sea. 
+                    Immerse yourself in authentic Jordanian hospitality and breathtaking landscapes.
+                </p>
+                
+                <!-- Key Benefits -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover-lift transform">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-2xl text-green-600"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">100% Verified Properties</h3>
+                        <p class="text-gray-600">Each chalet personally inspected for quality and authenticity</p>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover-lift transform">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">24/7 Guest Support</h3>
+                        <p class="text-gray-600">Dedicated concierge service for your entire stay</p>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover-lift transform">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sustainable Tourism</h3>
+                        <p class="text-gray-600">Eco-friendly practices and community partnerships</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Featured Chalets -->
-    <section id="chalets" class="py-16 px-4 sm:px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Available Chalets</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Explore our curated selection of luxury accommodations across Jordan's most stunning locations
-                </p>
+            
+            <!-- Booking Search Form - Now prominently featured -->
+            <div class="bg-white rounded-2xl p-8 shadow-2xl max-w-5xl mx-auto mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Find Your Perfect Chalet</h3>
+                <div class="space-y-6">
+                    <!-- City Selection -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Select Destination</label>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <label class="city-label flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300 text-center">
+                                <input type="checkbox" class="city-checkbox sr-only" value="petra">
+                                <i class="fas fa-city text-green-600 text-lg"></i>
+                                <span class="font-medium">Petra</span>
+                            </label>
+                            <label class="city-label flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300 text-center">
+                                <input type="checkbox" class="city-checkbox sr-only" value="amman">
+                                <i class="fas fa-city text-green-600 text-lg"></i>
+                                <span class="font-medium">Amman</span>
+                            </label>
+                            <label class="city-label flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300 text-center">
+                                <input type="checkbox" class="city-checkbox sr-only" value="dead-sea">
+                                <i class="fas fa-water text-green-600 text-lg"></i>
+                                <span class="font-medium">Dead Sea</span>
+                            </label>
+                            <label class="city-label flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition-all duration-300 text-center">
+                                <input type="checkbox" class="city-checkbox sr-only" value="wadi-rum">
+                                <i class="fas fa-mountain text-green-600 text-lg"></i>
+                                <span class="font-medium">Wadi Rum</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Date & Guests -->
+                    <div class="grid md:grid-cols-4 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Check-in</label>
+                            <input 
+                                type="date" 
+                                id="check-in"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Check-out</label>
+                            <input 
+                                type="date" 
+                                id="check-out"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Adults</label>
+                            <select 
+                                id="adults"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                            >
+                                <option value="1">1 Adult</option>
+                                <option value="2" selected>2 Adults</option>
+                                <option value="3">3 Adults</option>
+                                <option value="4">4 Adults</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Children</label>
+                            <select 
+                                id="children"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                            >
+                                <option value="0" selected>No Children</option>
+                                <option value="1">1 Child</option>
+                                <option value="2">2 Children</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Range -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Price Range: <span id="price-value" class="font-bold text-green-600">70 - 350 JD</span> per night</label>
+                        <input 
+                            type="range" 
+                            min="70" 
+                            max="350" 
+                            value="350" 
+                            step="10" 
+                            id="price-range"
+                            class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer price-slider"
+                        />
+                        <div class="flex justify-between text-xs text-gray-500 mt-2">
+                            <span>70 JD</span>
+                            <span>140 JD</span>
+                            <span>210 JD</span>
+                            <span>280 JD</span>
+                            <span>350 JD</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover-lift">
+                        Search & Book Now <i class="fas fa-search ml-2"></i>
+                    </button>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Featured Chalets Preview -->
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-black text-gray-900 mb-4">Our Most Popular Chalets</h2>
+                <p class="text-lg text-gray-600">Hand-picked for an unforgettable Jordanian experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="petra" data-price="175">
                     <div class="relative">
                         <img 
@@ -305,7 +301,7 @@
                             alt="Petra Heritage Chalet"
                             class="w-full h-48 object-cover"
                         />
-                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-sm font-bold text-amber-600">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
                             175 JD/night
                         </div>
                     </div>
@@ -313,7 +309,7 @@
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold text-gray-900">Petra Heritage</h3>
                             <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-amber-500 text-sm"></i>
+                                <i class="fas fa-star text-green-500 text-sm"></i>
                                 <span class="text-sm font-medium text-gray-700">4.8</span>
                             </div>
                         </div>
@@ -323,19 +319,15 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                                 Mountain View
                             </div>
                             <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                                 Private Pool
                             </div>
-                            <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                                Traditional Design
-                            </div>
                         </div>
-                        <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold transition-colors reserve-now-button">
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold transition-colors reserve-now-button">
                             Reserve Now
                         </button>
                     </div>
@@ -348,7 +340,7 @@
                             alt="Dead Sea Retreat"
                             class="w-full h-48 object-cover"
                         />
-                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-sm font-bold text-amber-600">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
                             210 JD/night
                         </div>
                     </div>
@@ -356,7 +348,7 @@
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold text-gray-900">Dead Sea Retreat</h3>
                             <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-amber-500 text-sm"></i>
+                                <i class="fas fa-star text-green-500 text-sm"></i>
                                 <span class="text-sm font-medium text-gray-700">4.9</span>
                             </div>
                         </div>
@@ -366,19 +358,15 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                                 Sea View
                             </div>
                             <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                                 Spa Access
                             </div>
-                            <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                                Infinity Pool
-                            </div>
                         </div>
-                        <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold transition-colors reserve-now-button">
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold transition-colors reserve-now-button">
                             Reserve Now
                         </button>
                     </div>
@@ -391,7 +379,7 @@
                             alt="Wadi Rum Desert Lodge"
                             class="w-full h-48 object-cover"
                         />
-                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-sm font-bold text-amber-600">
+                        <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full text-sm font-bold text-green-600">
                             140 JD/night
                         </div>
                     </div>
@@ -399,7 +387,7 @@
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-lg font-bold text-gray-900">Wadi Rum Lodge</h3>
                             <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-amber-500 text-sm"></i>
+                                <i class="fas fa-star text-green-500 text-sm"></i>
                                 <span class="text-sm font-medium text-gray-700">4.7</span>
                             </div>
                         </div>
@@ -409,19 +397,15 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                                 Desert View
                             </div>
                             <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                                 Stargazing
                             </div>
-                            <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                                Bedouin Experience
-                            </div>
                         </div>
-                        <button class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold transition-colors reserve-now-button">
+                        <button class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold transition-colors reserve-now-button">
                             Reserve Now
                         </button>
                     </div>
@@ -429,16 +413,16 @@
             </div>
             
             <div class="text-center mt-10">
-                <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center gap-2">
+                <button class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center gap-2">
                     <i class="fas fa-images"></i>
-                    View All Chalets
+                    View All 12 Chalets
                 </button>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-4 sm:px-6 desert-bg">
+    <section id="about" class="py-16 px-4 sm:px-6 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-8 items-center">
                 <div class="relative">
@@ -465,12 +449,12 @@
                         Jordanian hospitality.
                     </p>
                     <div class="grid grid-cols-2 gap-4 pt-4">
-                        <div class="bg-white/70 backdrop-blur-sm p-4 rounded-xl text-center">
-                            <div class="text-xl font-bold text-amber-600">100%</div>
+                        <div class="bg-green-50 p-4 rounded-xl text-center">
+                            <div class="text-xl font-bold text-green-600">100%</div>
                             <div class="text-sm text-gray-600">Verified Properties</div>
                         </div>
-                        <div class="bg-white/70 backdrop-blur-sm p-4 rounded-xl text-center">
-                            <div class="text-xl font-bold text-amber-600">24/7</div>
+                        <div class="bg-green-50 p-4 rounded-xl text-center">
+                            <div class="text-xl font-bold text-green-600">24/7</div>
                             <div class="text-sm text-gray-600">Guest Support</div>
                         </div>
                     </div>
@@ -480,191 +464,155 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 sm:px-6 bg-white">
+    <section id="contact" class="py-16 px-4 sm:px-6 green-bg text-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Contact Us</h2>
-                <p class="text-lg text-gray-600">We're here to help you plan your perfect Jordanian getaway</p>
+                <h2 class="text-3xl sm:text-4xl font-black mb-4">Contact Us</h2>
+                <p class="text-lg opacity-90">We're here to help you plan your perfect Jordanian getaway</p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-8">
                 <div class="space-y-6">
-                    <div class="bg-gradient-to-r from-amber-600 to-orange-600 p-6 rounded-xl text-white">
-                        <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-3">
+                            <i class="fas fa-envelope"></i>
+                            Get in Touch
+                        </h3>
+                        
                         <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 bg-white/20 p-2 rounded-lg">
-                                    <i class="fas fa-map-marker-alt"></i>
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                                    <i class="fas fa-map-marker-alt text-2xl"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-sm">Address</div>
-                                    <div class="text-white/90 text-sm">King Hussein Business Park, Amman, Jordan 11953</div>
+                                    <div class="font-bold text-lg">Address</div>
+                                    <div class="opacity-90">King Hussein Business Park, Amman, Jordan 11953</div>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 bg-white/20 p-2 rounded-lg">
-                                    <i class="fas fa-phone"></i>
+                            
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                                    <i class="fas fa-phone text-2xl"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-sm">Phone</div>
-                                    <div class="text-white/90 text-sm">+962 6 580 0100</div>
+                                    <div class="font-bold text-lg">Phone</div>
+                                    <div class="opacity-90">+962 6 580 0100</div>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 bg-white/20 p-2 rounded-lg">
-                                    <i class="fas fa-envelope"></i>
+                            
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                                    <i class="fas fa-envelope text-2xl"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-sm">Email</div>
-                                    <div class="text-white/90 text-sm">info@revafarmsjordan.com</div>
+                                    <div class="font-bold text-lg">Email</div>
+                                    <div class="opacity-90">info@revafarmsjordan.com</div>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 bg-white/20 p-2 rounded-lg">
-                                    <i class="fas fa-clock"></i>
+                            
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                                    <i class="fas fa-clock text-2xl"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-sm">Working Hours</div>
-                                    <div class="text-white/90 text-sm">Sunday-Thursday: 9am-5pm</div>
-                                    <div class="text-white/90 text-sm">Friday-Saturday: Closed</div>
+                                    <div class="font-bold text-lg">Working Hours</div>
+                                    <div class="opacity-90">Sunday-Thursday: 9am-5pm</div>
+                                    <div class="opacity-90">Friday-Saturday: Closed</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="bg-gradient-to-r from-green-600 to-green-700 p-6 rounded-xl text-center">
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <i class="fas fa-calendar-alt text-3xl"></i>
+                            <div>
+                                <div class="text-2xl font-black">Ready to Book?</div>
+                                <div class="text-lg opacity-90">Reserve your dream chalet today</div>
+                            </div>
+                        </div>
+                        <button class="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105">
+                            Check Availability
+                        </button>
+                    </div>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
                     <form action="https://formspree.io/f/mrbagybk" method="POST" class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                            <div class="group">
+                                <label class="block text-sm font-medium mb-2 opacity-90">First Name</label>
                                 <input 
                                     type="text" 
                                     name="first_name"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-white/70 text-white"
                                     placeholder="Your first name"
                                     required
                                 />
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                            <div class="group">
+                                <label class="block text-sm font-medium mb-2 opacity-90">Last Name</label>
                                 <input 
                                     type="text" 
                                     name="last_name"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-white/70 text-white"
                                     placeholder="Your last name"
                                     required
                                 />
                             </div>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-red-500">*</span></label>
-                            <input 
-                                type="tel" 
-                                name="phone"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                placeholder="+962 XXX XXX XXXX"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <div class="group">
+                            <label class="block text-sm font-medium mb-2 opacity-90">Email</label>
                             <input 
                                 type="email" 
                                 name="email"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-white/70 text-white"
                                 placeholder="your.email@example.com"
                                 required
                             />
                         </div>
+                        <div class="group">
+                            <label class="block text-sm font-medium mb-2 opacity-90">Phone</label>
+                            <input 
+                                type="tel" 
+                                name="phone"
+                                class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-white/70 text-white"
+                                placeholder="+962 XXX XXX XXXX"
+                                required
+                            />
+                        </div>
                         <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
+                            <div class="group">
+                                <label class="block text-sm font-medium mb-2 opacity-90">Check-in Date</label>
                                 <input 
                                     type="date" 
                                     name="check_in"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 text-white"
                                 />
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
+                            <div class="group">
+                                <label class="block text-sm font-medium mb-2 opacity-90">Check-out Date</label>
                                 <input 
                                     type="date" 
                                     name="check_out"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 text-white"
                                 />
                             </div>
                         </div>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Adults</label>
-                                <select 
-                                    name="adults"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                >
-                                    <option value="1">1 Adult</option>
-                                    <option value="2" selected>2 Adults</option>
-                                    <option value="3">3 Adults</option>
-                                    <option value="4">4 Adults</option>
-                                    <option value="5">5+ Adults</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Children</label>
-                                <select 
-                                    name="children"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                                >
-                                    <option value="0" selected>No Children</option>
-                                    <option value="1">1 Child</option>
-                                    <option value="2">2 Children</option>
-                                    <option value="3">3 Children</option>
-                                    <option value="4">4+ Children</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Location</label>
-                            <select 
-                                name="location"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                            >
-                                <option value="" selected>Select a location</option>
-                                <option value="petra">Petra</option>
-                                <option value="amman">Amman</option>
-                                <option value="dead-sea">Dead Sea</option>
-                                <option value="wadi-rum">Wadi Rum</option>
-                                <option value="any">Any Location</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
-                            <select 
-                                name="budget"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                            >
-                                <option value="" selected>Select a budget range</option>
-                                <option value="under-100">Under 100 JD per night</option>
-                                <option value="100-200">100 - 200 JD per night</option>
-                                <option value="200-300">200 - 300 JD per night</option>
-                                <option value="over-300">Over 300 JD per night</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <div class="group">
+                            <label class="block text-sm font-medium mb-2 opacity-90">Special Requests</label>
                             <textarea 
                                 name="message"
                                 rows="4"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none"
+                                class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-white/70 text-white resize-none"
                                 placeholder="Tell us about your dream Jordanian getaway..."
-                                required
                             ></textarea>
                         </div>
                         <button 
                             type="submit"
-                            class="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                            class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover-lift"
                         >
-                            Send Message
+                            Send Booking Request
                         </button>
                     </form>
                 </div>
@@ -678,7 +626,7 @@
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-2 mb-3">
-                        <div class="w-8 h-8 bg-amber-600 rounded-lg flex items-center justify-center">
+                        <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                             </svg>
@@ -689,13 +637,13 @@
                         Experience the magic of Jordan with our luxury chalets and authentic hospitality.
                     </p>
                     <div class="flex space-x-3">
-                        <div class="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-xs cursor-pointer">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-xs cursor-pointer">
                             <i class="fab fa-facebook-f"></i>
                         </div>
-                        <div class="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-xs cursor-pointer">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-xs cursor-pointer">
                             <i class="fab fa-twitter"></i>
                         </div>
-                        <div class="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-xs cursor-pointer">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-xs cursor-pointer">
                             <i class="fab fa-instagram"></i>
                         </div>
                     </div>
@@ -795,7 +743,7 @@
         });
         
         // Search Functionality
-        document.querySelector('.bg-white.rounded-xl.shadow-lg button').addEventListener('click', function(e) {
+        document.querySelector('.bg-white.rounded-2xl.shadow-2xl button').addEventListener('click', function(e) {
             e.preventDefault();
             
             const checkIn = document.getElementById('check-in').value;
