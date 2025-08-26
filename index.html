@@ -239,22 +239,22 @@
                             
                             <!-- Price Range -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Price Range: <span id="price-value" class="font-bold text-amber-600">$100 - $500</span> per night</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Price Range: <span id="price-value" class="font-bold text-amber-600">70 - 350 JD</span> per night</label>
                                 <input 
                                     type="range" 
-                                    min="100" 
-                                    max="500" 
-                                    value="500" 
-                                    step="50" 
+                                    min="70" 
+                                    max="350" 
+                                    value="350" 
+                                    step="10" 
                                     id="price-range"
                                     class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer price-slider"
                                 />
                                 <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                    <span>$100</span>
-                                    <span>$200</span>
-                                    <span>$300</span>
-                                    <span>$400</span>
-                                    <span>$500</span>
+                                    <span>70 JD</span>
+                                    <span>140 JD</span>
+                                    <span>210 JD</span>
+                                    <span>280 JD</span>
+                                    <span>350 JD</span>
                                 </div>
                             </div>
                             
@@ -298,7 +298,7 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="petra" data-price="249">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="petra" data-price="175">
                     <div class="relative">
                         <img 
                             src="https://placehold.co/600x400/9d0208/ffffff?text=Petra+Chalet" 
@@ -306,7 +306,7 @@
                             class="w-full h-48 object-cover"
                         />
                         <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-sm font-bold text-amber-600">
-                            $249/night
+                            175 JD/night
                         </div>
                     </div>
                     <div class="p-5">
@@ -341,7 +341,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="dead-sea" data-price="299">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="dead-sea" data-price="210">
                     <div class="relative">
                         <img 
                             src="https://placehold.co/600x400/0077b6/ffffff?text=Dead+Sea+Retreat" 
@@ -349,7 +349,7 @@
                             class="w-full h-48 object-cover"
                         />
                         <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-sm font-bold text-amber-600">
-                            $299/night
+                            210 JD/night
                         </div>
                     </div>
                     <div class="p-5">
@@ -384,7 +384,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="wadi-rum" data-price="199">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift" data-city="wadi-rum" data-price="140">
                     <div class="relative">
                         <img 
                             src="https://placehold.co/600x400/cc6600/ffffff?text=Wadi+Rum+Lodge" 
@@ -392,7 +392,7 @@
                             class="w-full h-48 object-cover"
                         />
                         <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-sm font-bold text-amber-600">
-                            $199/night
+                            140 JD/night
                         </div>
                     </div>
                     <div class="p-5">
@@ -644,10 +644,10 @@
                                 class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
                             >
                                 <option value="" selected>Select a budget range</option>
-                                <option value="under-200">Under $200 per night</option>
-                                <option value="200-300">$200 - $300 per night</option>
-                                <option value="300-400">$300 - $400 per night</option>
-                                <option value="over-400">Over $400 per night</option>
+                                <option value="under-100">Under 100 JD per night</option>
+                                <option value="100-200">100 - 200 JD per night</option>
+                                <option value="200-300">200 - 300 JD per night</option>
+                                <option value="over-300">Over 300 JD per night</option>
                             </select>
                         </div>
                         <div>
@@ -769,7 +769,7 @@
         if (priceSlider && priceValue) {
             priceSlider.addEventListener('input', function() {
                 const value = this.value;
-                priceValue.textContent = `$100 - $${value}`;
+                priceValue.textContent = `70 - ${value} JD`;
             });
         }
         
@@ -815,7 +815,7 @@
             }
             
             // In a real application, this would filter the chalets
-            alert(`Searching for chalets from ${checkIn} to ${checkOut} for ${parseInt(adults) + parseInt(children)} guests with a maximum price of $${price} per night`);
+            alert(`Searching for chalets from ${checkIn} to ${checkOut} for ${parseInt(adults) + parseInt(children)} guests with a maximum price of ${price} JD per night`);
         });
     </script>
 </body>
