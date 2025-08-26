@@ -1,0 +1,21 @@
+// Chalet model
+const chaletSchema = {
+  name: String,
+  location: String,
+  price: Number,
+  description: String,
+  images: [String],
+  amenities: [String],
+  availability: [{ date: Date, available: Boolean }]
+};
+
+// Booking model  
+const bookingSchema = {
+  userId: ObjectId,
+  chaletId: ObjectId,
+  checkIn: Date,
+  checkOut: Date,
+  guests: { adults: Number, children: Number },
+  totalPrice: Number,
+  status: String // pending, confirmed, cancelled
+};
